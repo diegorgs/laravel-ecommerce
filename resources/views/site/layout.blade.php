@@ -32,10 +32,10 @@
                     </form>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active text-white" aria-current="page" href="{{route('site.index')}}">Home</a>
                     </li>
                     <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Filtrar </a>
+                        <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Filtrar </a>
                         <ul class="dropdown-menu">
                             @foreach ($categoriasMenu as $categoriaM)
                                 <li><a class="dropdown-item" href="{{route('site.categoria',$categoriaM->id)}}">{{$categoriaM->nome}}</a></li>
@@ -43,7 +43,7 @@
                         </ul>       
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link active text-white" href="#">Carrinho</a>
+                    <a class="nav-link active text-white" href="{{route('site.carrinho')}}">Carrinho</a>
                     </li>
                 </ul>
                     

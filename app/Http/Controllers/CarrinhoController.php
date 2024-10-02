@@ -18,7 +18,7 @@ class CarrinhoController extends Controller
             'price'=>$request->price,
             'quantity'=>abs($request->qnt),
             'attributes'=>array(
-                'image'=>$request->img
+                'image'=>$request->image
             ),
         ]);
 
