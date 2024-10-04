@@ -23,7 +23,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             return redirect()->intended(route('admin.dashboard'));
         } else {
-            return redirect()-back()->with('erro', 'Email ou senha invaliido!');
+            return redirect()->back()->with('erro', 'Email ou senha invaliido!');
         }
     }
     public function logout(Request $request){

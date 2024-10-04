@@ -54,7 +54,7 @@
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end pe-4">
                         <li class="nav-item">
-                            <button class="btn btn-outline-primary nav-link active text-light p-md-3 ms-md-3" href="#">Login <i class="bi bi-box-arrow-in-right"></i></button>
+                            <a class="btn btn-outline-primary nav-link active text-light p-md-3 ms-md-3" href="{{route('login.form')}}">Login <i class="bi bi-box-arrow-in-right"></i></a>
                         </li>
                     </ul>
                 </div>

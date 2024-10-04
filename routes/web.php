@@ -20,7 +20,7 @@ Route::post('/remover',[CarrinhoController::class, 'removerCarrinho'])->name('si
 Route::get('/limpar',[CarrinhoController::class, 'limparCarrinho'])->name('site.limparCarrinho');
 
 // Login
-Route::view('/login', 'login.login')->name('login.form');
+Route::view('/login', 'login.form')->name('login.form');
 Route::post('/auth', [LoginController::class, 'auth'])->name('login.auth');
 Route::get('/logout', [LoginController::class, 'logout'])->name('login.logout');
 Route::get('/register',[LoginController::class, 'create'])->name('login.create');
