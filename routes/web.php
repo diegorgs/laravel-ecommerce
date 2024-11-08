@@ -5,7 +5,12 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 
+
+// User
+Route::resource('users', UserController::class);
 
 // Site
 Route::get('/',[ SiteController::class,'index'])->name('site.index');
@@ -26,6 +31,6 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('login.logout');
 Route::get('/register',[LoginController::class, 'create'])->name('login.create');
 
 // Admin
-
+Route::get('admin/dashboard',[DashboardController::class, 'index'])->name('admin.dashboard')->middleware('auth');;
 
 

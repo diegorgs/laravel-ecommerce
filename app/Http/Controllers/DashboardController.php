@@ -11,6 +11,6 @@ use App\Http\Models\Produto;
 class DashboardController extends Controller
 {
     public function index(){
-        
+        return view('admin.dashboard');
     }
 }

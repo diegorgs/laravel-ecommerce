@@ -26,8 +26,8 @@ class ProdutoFactory extends Factory
             'preco'=> $this->faker->randomNumber(2),
             'slug'=> Str::slug($nome),
             'imagem'=>$this->faker->imageUrl(400,400),
-            'id_user'=> User::pluck('id')->random(),
-            'id_categoria'=> Categoria::pluck('id')->random(),
+            'id_user' => User::exists() ? User::pluck('id')->random() : User::factory()->create()->id,
+            'id_categoria' => Categoria::exists() ? Categoria::pluck('id')->random() : Categoria::factory()->create()->id,
 
         ];
     }
